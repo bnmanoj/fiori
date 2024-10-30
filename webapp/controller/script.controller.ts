@@ -42,7 +42,7 @@ interface Item {
 
 export default class Script extends Controller {
     
-    // Private property to hold the data model
+ 
     private oModel!: JSONModel;
 
     public onInit(): void {
