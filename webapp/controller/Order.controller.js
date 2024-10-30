@@ -27,6 +27,7 @@ function (Controller) {
 
         fnClickOfButton: function(oEvent){
             sap.m.MessageToast.show("Presssed");
+            sap.m.MessageToast.show("clicked");
 
    
         this.getOwnerComponent().getRouter().navTo("RouteMaterial",{
