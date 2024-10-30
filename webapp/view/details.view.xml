@@ -1,0 +1,34 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="com.sap.s.zstudent.controller.details"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="details" title="{i18n>title}">
+        <content>
+        <HBox >
+        <Label text="This is the navigated page"></Label>
+        <Input  value = "{oStudentDet>/studentdet}"></Input>
+        </HBox>
+
+        <Button text="Press" press="fnClickofButton"></Button>
+        <Table items="{oNameModel>/}">
+
+            <columns>
+                <Column > 
+                    <Label text="Name"></Label>
+                    </Column >
+                    <Column >
+                    <Label text="address"></Label>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem >
+                    <cells>
+                    <Input  value="{oNameModel>Name}"></Input>
+                    <Input  value="{oNameModel>address}"></Input>
+                    
+                    </cells>
+                </ColumnListItem>
+            </items>       
+        </Table>
+        </content>
+    </Page>
+</mvc:View>

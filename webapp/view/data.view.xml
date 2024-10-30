@@ -1,0 +1,14 @@
+<mvc:View controllerName="com.sap.s.zstudent.controller.data"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="data" title="{i18n>title}">
+        <content>
+        <Label text="This is the last page"></Label>
+        
+        
+        <Input ></Input>
+
+        <Button text="Press" press="fnClickofButton"></Button>
+        </content>
+    </Page>
+</mvc:View>
