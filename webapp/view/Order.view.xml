@@ -1,0 +1,52 @@
+<mvc:View controllerName="com.sap.ztable.controller.Order"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+       <HBox >
+        <Label text="This is the first page"></Label>
+        <Input></Input>
+        </HBox>
+        <Button text="Enter" press="fnClickOfButton"></Button>
+        <Table  items="{OrderSales>/}">
+        <headerToolbar>
+        <OverflowToolbar>
+        <ToolbarSpacer/>
+        </OverflowToolbar>
+        </headerToolbar>
+        <columns>
+        <Column>
+                     <Label text="OrderID" />
+                    </Column>
+                    <Column>
+                        <Label text="CustomerID" />
+                    </Column>
+                    <Column>
+                        <Label text="RequiredDate" />
+                    </Column>
+                    <Column>
+                        <Label text="ShipCity" />
+                    </Column>
+                    <Column>
+                        <Label text="ShipPostalCode" />
+                    </Column>
+        </columns>
+        <items>
+        <ColumnListItem >
+        <cells>
+                            <!-- <Link value="{ path: 'OrderSales>OrderID',formatter: '.formatter'}" /> -->
+                            <Link text="{OrderSales>OrderID}" press="fnClickOfButton"/>
+                            <Input value="{OrderSales>CustomerID}" />
+                            <Input value="{OrderSales>RequiredDate}" />
+                            <Input value="{OrderSales>ShipCity}" />
+                            <Input value="{OrderSales>ShipPostalCode}" />
+        
+        </cells>
+        </ColumnListItem>
+        </items>
+
+        </Table>
+
+         </content>
+    </Page>
+</mvc:View>

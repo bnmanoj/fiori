@@ -1,0 +1,49 @@
+<mvc:View controllerName="com.sap.ztable.controller.Material"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="Material" title="{i18n>title}">
+        <content>
+        <Label text="This is 2nd page"></Label>
+         <Table  items="{OrderDetails>/}">
+        <headerToolbar>
+        <OverflowToolbar>
+        <ToolbarSpacer/>
+        </OverflowToolbar>
+        </headerToolbar>
+        <columns>
+        <!-- <Column>
+                     <Label text="OrderID" />
+                    </Column> -->
+                    <Column>
+                        <Label text="ProductID" />
+                    </Column>
+                    <Column>
+                        <Label text="UnitPrice" />
+                    </Column>
+                    <Column>
+                        <Label text="Quantity" />
+                    </Column>
+                    <Column>
+                        <Label text="Discount" />
+                    </Column>
+        </columns>
+        <items>
+        <ColumnListItem >
+        <cells>
+                            <!-- <Link value="{ path: 'OrderSales>OrderID',formatter: '.formatter'}" /> -->
+                            <!-- <Input text="{OrderDetails>OrderID}" /> -->
+                            <Text text="{OrderDetails>ProductID}" />
+                            <Text text="{OrderDetails>UnitPrice}" />
+                            <Text text="{OrderDetails>Quantity}" />
+                            <Text text="{OrderDetails>Discount}" />
+        
+        </cells>
+        </ColumnListItem>
+        </items>
+
+        </Table>
+
+
+        </content>
+    </Page>
+</mvc:View>
