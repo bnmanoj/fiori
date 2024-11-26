@@ -1,0 +1,562 @@
+<!-- <mvc:View
+    controllerName="project2.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Data Entry">
+        <content>
+            <VBox id="dataInputFields">
+                <Label text="First Name" required="true" />
+                <Input id="firstName" placeholder="First Name" required="true" />
+
+                <Label text="Age" required="true" />
+                <Input id="age" placeholder="Age" required="true" type="Number" />
+
+                <Label text="Email" required="true" />
+                <Input id="email" placeholder="Email" required="true" type="Email" />
+
+                <Label text="Phone" required="true" />
+                <Input id="phone" placeholder="Phone" required="true" type="Tel" />
+
+                <Label text="Address" required="true" />
+                <Input id="address" placeholder="Address" required="true" />
+
+                <Label text="City" />
+                <Input id="city" placeholder="City" />
+
+                <Label text="State" />
+                <Input id="state" placeholder="State" />
+
+                <Label text="Country" />
+                <Input id="country" placeholder="Country" />
+
+                <Label text="ZIP Code" />
+                <Input id="zip" placeholder="ZIP Code" type="Number" />
+
+                <Label text="Comments" />
+                <TextArea id="comments" placeholder="Comments" />
+
+                <Button text="Submit" press="onSubmit" />
+                <Button text="Save" press="onSave" />
+            </VBox>
+
+            <Table
+                id="dataTable"
+                items="{/data}">
+                <columns>
+                    <Column>
+                        <Text text="First Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Age" />
+                    </Column>
+                    <Column>
+                        <Text text="Email" />
+                    </Column>
+                    <Column>
+                        <Text text="Phone" />
+                    </Column>
+                    <Column>
+                        <Text text="Address" />
+                    </Column>
+                    <Column>
+                        <Text text="City" />
+                    </Column>
+                    <Column>
+                        <Text text="State" />
+                    </Column>
+                    <Column>
+                        <Text text="Country" />
+                    </Column>
+                    <Column>
+                        <Text text="ZIP Code" />
+                    </Column>
+                    <Column>
+                        <Text text="Comments" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Input value="{firstName}" press="onNavToDetail" />
+                            <Input value="{age}" editable="{editable}" />
+                            <Input value="{email}" editable="{editable}" />
+                            <Input value="{phone}" editable="{editable}" />
+                            <Input value="{address}" editable="{editable}" />
+                            <Input value="{city}" editable="{editable}" />
+                            <Input value="{state}" editable="{editable}" />
+                            <Input value="{country}" editable="{editable}" />
+                            <Input value="{zip}" editable="{editable}" />
+                            <Input value="{comments}" editable="{editable}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View> -->
+
+
+<!-- <mvc:View
+    controllerName="project2.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Data Entry">
+        <content>
+            <VBox id="dataInputFields">
+                <Label text="First Name" required="true" />
+                <Input id="firstName" placeholder="First Name" required="true" />
+
+                <Label text="Age" required="true" />
+                <Input id="age" placeholder="Age" required="true" type="Number" />
+
+                <Label text="Email" required="true" />
+                <Input id="email" placeholder="Email" required="true" type="Email" />
+
+                <Label text="Phone" required="true" />
+                <Input id="phone" placeholder="Phone" required="true" type="Tel" />
+
+                <Label text="Address" required="true" />
+                <Input id="address" placeholder="Address" required="true" />
+
+                <Label text="City" />
+                <Input id="city" placeholder="City" />
+
+                <Label text="State" />
+                <Input id="state" placeholder="State" />
+
+                <Label text="Country" />
+                <Input id="country" placeholder="Country" />
+
+                <Label text="ZIP Code" />
+                <Input id="zip" placeholder="ZIP Code" type="Number" />
+
+                <Label text="Comments" />
+                <TextArea id="comments" placeholder="Comments" />
+
+                <Button text="Submit" press="onSubmit" />
+                <Button text="Save" press="onSave" />
+            </VBox>
+
+            <Table
+                id="dataTable"
+                items="{/data}">
+                <columns>
+                    <Column>
+                        <Text text="First Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Age" />
+                    </Column>
+                    <Column>
+                        <Text text="Email" />
+                    </Column>
+                    <Column>
+                        <Text text="Phone" />
+                    </Column>
+                    <Column>
+                        <Text text="Address" />
+                    </Column>
+                    <Column>
+                        <Text text="City" />
+                    </Column>
+                    <Column>
+                        <Text text="State" />
+                    </Column>
+                    <Column>
+                        <Text text="Country" />
+                    </Column>
+                    <Column>
+                        <Text text="ZIP Code" />
+                    </Column>
+                    <Column>
+                        <Text text="Comments" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Input 
+                                value="{firstName}" 
+                                editable="{= !${/editable} }" 
+                                press="onNavToDetail" />
+                            <Input 
+                                value="{age}" 
+                                editable="{= !${/editable} }" />
+                            <Input 
+                                value="{email}" 
+                                editable="{= !${/editable} }" />
+                            <Input 
+                                value="{phone}" 
+                                editable="{= !${/editable} }" />
+                            <Input 
+                                value="{address}" 
+                                editable="{= !${/editable} }" />
+                            <Input 
+                                value="{city}" 
+                                editable="{= !${/editable} }" />
+                            <Input 
+                                value="{state}" 
+                                editable="{= !${/editable} }" />
+                            <Input 
+                                value="{country}" 
+                                editable="{= !${/editable} }" />
+                            <Input 
+                                value="{zip}" 
+                                editable="{= !${/editable} }" />
+                            <Input 
+                                value="{comments}" 
+                                editable="{= !${/editable} }" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View> -->
+<!-- <mvc:View
+    controllerName="project2.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Data Entry">
+        <content>
+            <VBox id="dataInputFields">
+                <Label text="First Name" required="true" />
+                <Input id="firstName" placeholder="First Name" required="true" />
+
+                <Label text="Age" required="true" />
+                <Input id="age" placeholder="Age" required="true" type="Number" />
+
+                <Label text="Email" required="true" />
+                <Input id="email" placeholder="Email" required="true" type="Email" />
+
+                <Label text="Phone" required="true" />
+                <Input id="phone" placeholder="Phone" required="true" type="Tel" />
+
+                <Label text="Address" required="true" />
+                <Input id="address" placeholder="Address" required="true" />
+
+                <Label text="City" />
+                <Input id="city" placeholder="City" />
+
+                <Label text="State" />
+                <Input id="state" placeholder="State" />
+
+                <Label text="Country" />
+                <Input id="country" placeholder="Country" />
+
+                <Label text="ZIP Code" />
+                <Input id="zip" placeholder="ZIP Code" type="Number" />
+
+                <Label text="Comments" />
+                <TextArea id="comments" placeholder="Comments" />
+
+                <Button text="Submit" press="onSubmit" />
+                <Button text="Save" press="onSave" />
+            </VBox>
+
+            <Table
+                id="dataTable"
+                items="{/data}">
+                <columns>
+                    <Column>
+                        <Text text="First Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Age" />
+                    </Column>
+                    <Column>
+                        <Text text="Email" />
+                    </Column>
+                    <Column>
+                        <Text text="Phone" />
+                    </Column>
+                    <Column>
+                        <Text text="Address" />
+                    </Column>
+                    <Column>
+                        <Text text="City" />
+                    </Column>
+                    <Column>
+                        <Text text="State" />
+                    </Column>
+                    <Column>
+                        <Text text="Country" />
+                    </Column>
+                    <Column>
+                        <Text text="ZIP Code" />
+                    </Column>
+                    <Column>
+                        <Text text="Comments" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Input value="{firstName}" editable="{editable}" />
+                            <Input value="{age}" editable="{editable}" />
+                            <Input value="{email}" editable="{editable}" />
+                            <Input value="{phone}" editable="{editable}" />
+                            <Input value="{address}" editable="{editable}" />
+                            <Input value="{city}" editable="{editable}" />
+                            <Input value="{state}" editable="{editable}" />
+                            <Input value="{country}" editable="{editable}" />
+                            <Input value="{zip}" editable="{editable}" />
+                            <Input value="{comments}" editable="{editable}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View> -->
+
+<!-- <mvc:View
+    controllerName="project2.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Data Entry">
+        <content>
+            <VBox id="dataInputFields">
+                <Label text="First Name" required="true" />
+                <Input id="firstName" placeholder="First Name" required="true" />
+
+                <Label text="Age" required="true" />
+                <Input id="age" placeholder="Age" required="true" type="Number" />
+
+                <Label text="Email" required="true" />
+                <Input id="email" placeholder="Email" required="true" type="Email" />
+
+                <Label text="Phone" required="true" />
+                <Input id="phone" placeholder="Phone" required="true" type="Tel" />
+
+                <Label text="Address" required="true" />
+                <Input id="address" placeholder="Address" required="true" />
+
+                <Label text="City" />
+                <Input id="city" placeholder="City" />
+
+                <Label text="State" />
+                <Input id="state" placeholder="State" />
+
+                <Label text="Country" />
+                <Input id="country" placeholder="Country" />
+
+                <Label text="ZIP Code" />
+                <Input id="zip" placeholder="ZIP Code" type="Number" />
+
+                <Label text="Comments" />
+                <TextArea id="comments" placeholder="Comments" />
+
+                <Button text="Submit" press="onSubmit" />
+                <Button text="Save" press="onSave" />
+            </VBox>
+
+            <Table
+                id="dataTable"
+                items="{/data}">
+                <columns>
+                    <Column>
+                        <Text text="First Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Age" />
+                    </Column>
+                    <Column>
+                        <Text text="Email" />
+                    </Column>
+                    <Column>
+                        <Text text="Phone" />
+                    </Column>
+                    <Column>
+                        <Text text="Address" />
+                    </Column>
+                    <Column>
+                        <Text text="City" />
+                    </Column>
+                    <Column>
+                        <Text text="State" />
+                    </Column>
+                    <Column>
+                        <Text text="Country" />
+                    </Column>
+                    <Column>
+                        <Text text="ZIP Code" />
+                    </Column>
+                    <Column>
+                        <Text text="Comments" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Input value="{firstName}" editable="{editable}" />
+                            <Input value="{age}" editable="{editable}" />
+                            <Input value="{email}" editable="{editable}" />
+                            <Input value="{phone}" editable="{editable}" />
+                            <Input value="{address}" editable="{editable}" />
+                            <Input value="{city}" editable="{editable}" />
+                            <Input value="{state}" editable="{editable}" />
+                            <Input value="{country}" editable="{editable}" />
+                            <Input value="{zip}" editable="{editable}" />
+                            <Input value="{comments}" editable="{editable}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View> -->
+<!-- 
+<mvc:View controllerName="project2.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center">
+        <content>
+            <VBox id="dataInputFields">
+                <Input placeholder="Name" required="true" />
+                <Input placeholder="Age" type="Number" required="true" />
+                <Input placeholder="Email" required="true" />
+                <Input placeholder="Phone Number" required="true" />
+                <Input placeholder="Address" required="true" />
+                <Input placeholder="City" />
+                <Input placeholder="State" />
+                <Input placeholder="Country" />
+                <Input placeholder="Postal Code" />
+                <Input placeholder="Occupation" />
+                <Button text="Submit" press="onSubmit" />
+                <Button text="Save" press="onSave" />
+            </VBox>
+           <Table
+    id="dataTable"
+    items="{/data}">
+    <columns>
+        <Column>
+            <Text text="First Name" />
+        </Column>
+        <Column>
+            <Text text="Age" />
+        </Column>
+        <Column>
+            <Text text="Email" />
+        </Column>
+        <Column>
+            <Text text="Phone" />
+        </Column>
+        <Column>
+            <Text text="Address" />
+        </Column>
+        <Column>
+            <Text text="City" />
+        </Column>
+        <Column>
+            <Text text="State" />
+        </Column>
+        <Column>
+            <Text text="Country" />
+        </Column>
+        <Column>
+            <Text text="ZIP Code" />
+        </Column>
+        <Column>
+            <Text text="Comments" />
+        </Column>
+    </columns>
+    <items>
+        <ColumnListItem>
+            <cells>
+                <Input value="{firstName}" editable="{editable}" />
+                <Input value="{age}" editable="{editable}" />
+                <Input value="{email}" editable="{editable}" />
+                <Input value="{phone}" editable="{editable}" />
+                <Input value="{address}" editable="{editable}" />
+                <Input value="{city}" editable="{editable}" />
+                <Input value="{state}" editable="{editable}" />
+                <Input value="{country}" editable="{editable}" />
+                <Input value="{zip}" editable="{editable}" />
+                <Input value="{comments}" editable="{editable}" />
+            </cells>
+        </ColumnListItem>
+    </items>
+</Table>
+        </content>
+    </Page>
+</mvc:View> -->
+
+
+<mvc:View controllerName="project2.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center">
+        <content>
+            <VBox id="dataInputFields">
+                <Input placeholder="Name" required="true" />
+                <Input placeholder="Age" type="Number" required="true" />
+                <Input placeholder="Email" required="true" />
+                <Input placeholder="Phone Number" required="true" />
+                <Input placeholder="Address" required="true" />
+                <Input placeholder="City" />
+                <Input placeholder="State" />
+                <Input placeholder="Country" />
+                <Input placeholder="Postal Code" />
+                <Input placeholder="Occupation" />
+                <Button text="Submit" press="onSubmit" />
+                <Button text="Save" press="onSave" />
+            </VBox>
+
+            <Table id="dataTable" items="{/data}">
+                <columns>
+                    <Column>
+                        <Text text="First Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Age" />
+                    </Column>
+                    <Column>
+                        <Text text="Email" />
+                    </Column>
+                    <Column>
+                        <Text text="Phone" />
+                    </Column>
+                    <Column>
+                        <Text text="Address" />
+                    </Column>
+                    <Column>
+                        <Text text="City" />
+                    </Column>
+                    <Column>
+                        <Text text="State" />
+                    </Column>
+                    <Column>
+                        <Text text="Country" />
+                    </Column>
+                    <Column>
+                        <Text text="ZIP Code" />
+                    </Column>
+                    <Column>
+                        <Text text="Comments" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Input value="{firstName}" press="onnav" editable="{editable}" />
+                            <Input value="{age}" editable="{editable}" />
+                            <Input value="{email}" editable="{editable}" />
+                            <Input value="{phone}" editable="{editable}" />
+                            <Input value="{address}" editable="{editable}" />
+                            <Input value="{city}" editable="{editable}" />
+                            <Input value="{state}" editable="{editable}" />
+                            <Input value="{country}" editable="{editable}" />
+                            <Input value="{zip}" editable="{editable}" />
+                            <Input value="{comments}" editable="{editable}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
