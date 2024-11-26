@@ -1,0 +1,44 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+          controllerName="project2.controller.View3" 
+          xmlns="sap.m" 
+          xmlns:f="sap.ui.layout.form" 
+          displayBlock="true">
+
+    <Page id="View3" title="User Information">
+        <content>
+            <f:SimpleForm editable="false" layout="ResponsiveGridLayout">
+                <f:content>
+                    <Label text="First Name" required="true"/>
+                    <Input id="firstName" value="{oModel>firstName}" editable="false"/>
+
+                    <Label text="Last Name" required="true"/>
+                    <Input id="lastName" value="{oModel>lastName}" editable="false"/>
+
+                    <Label text="Email" required="true"/>
+                    <Input id="email" value="{oModel>email}" type="Email" editable="false"/>
+
+                    <Label text="Phone Number" required="true"/>
+                    <Input id="phone" value="{oModel>phone}" editable="false"/>
+
+                    <Label text="Address" required="true"/>
+                    <Input id="address" value="{oModel>address}" editable="false"/>
+
+                    <Label text="City" required="true"/>
+                    <Input id="city" value="{oModel>city}" editable="false"/>
+
+                    <Label text="State"/>
+                    <Input id="state" value="{oModel>state}" editable="false"/>
+
+                    <Label text="Country"/>
+                    <Input id="country" value="{oModel>country}" editable="false"/>
+
+                    <Label text="ZIP Code"/>
+                    <Input id="zip" value="{oModel>zip}" editable="false"/>
+
+                    <Label text="Comments"/>
+                    <TextArea id="comments" value="{oModel>comments}" editable="false"/>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>
