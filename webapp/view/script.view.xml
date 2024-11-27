@@ -15,7 +15,7 @@
                 <items>
                     <ColumnListItem>
                         <cells>
-                            <Text text="{name}" />
+                            <Button text="{name}" press=".onNamePress" />
                             <Text text="{age}" />
                         </cells>
                     </ColumnListItem>

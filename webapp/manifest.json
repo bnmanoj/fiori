@@ -77,6 +77,13 @@
           "target": [
             "Targetscript"
           ]
+        },
+        {
+          "name": "Routetest",
+          "pattern": "Routetest/{name}/{age}",
+          "target": [
+            "Targettest"
+          ]
         }
       ],
       "targets": {
@@ -86,6 +93,13 @@
           "clearControlAggregation": false,
           "viewId": "script",
           "viewName": "script"
+        },
+        "Targettest": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "test",
+          "viewName": "test"
         }
       }
     },

@@ -1,0 +1,20 @@
+
+
+<mvc:View controllerName="cmd.sap.cc.ztype.controller.test"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="test" title="{i18n>title}">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Label text="Name:" />
+                <Text id="nameText" /> <!-- Added ID for manual binding -->
+                <Label text="Age:" />
+                <Text id="ageText" /> <!-- Added ID for manual binding -->
+                <Label text="Phone Number:" />
+                <Text id="phoneText" /> <!-- Added ID for manual binding -->
+                <Label text="Address:" />
+                <Text id="addressText" /> <!-- Added ID for manual binding -->
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
