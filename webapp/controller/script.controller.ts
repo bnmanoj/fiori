@@ -64,6 +64,7 @@ export default class Script extends Controller {
 
     public onAfterRendering(oEvent: Event): void {
         debugger;
+        console.log("hello");
     }
 
     public onBeforeRendering(oEvent: Event): void {
